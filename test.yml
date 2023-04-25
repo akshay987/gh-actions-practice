@@ -1,0 +1,15 @@
+name: gh-sample
+
+on: [push]
+
+jobs:
+    run-shell-commands:
+      runs-on: ubuntu-latest 
+      steps:
+        - name: print
+          run: echo "Hello Pradeep"
+        - name: check multiple versions
+          run: |
+            mvn --version
+            node -v 
+            npm -v

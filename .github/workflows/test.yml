@@ -1,7 +1,5 @@
 name: gh-sample
-
 on: [push]
-
 jobs:
     run-shell-commands:
       runs-on: ubuntu-latest 

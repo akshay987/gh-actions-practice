@@ -8,3 +8,7 @@ jobs:
       steps:
         - name: actions checkout
           uses: actions/checkout@v3
+        - name: list the checkout files
+          run: |
+            pwd
+            ls -la

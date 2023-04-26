@@ -6,6 +6,14 @@ jobs:
     testing-the-actions:
       runs-on: ubuntu-latest
       steps:
+        - name: fetch some env
+          run: |
+            pwd
+            ls
+            echo $GITHUB_SHA
+            echo $GITHUB_REPOSITORY
+            echo $GITHUB_WORKSPACE
+
         - name: actions checkout
           uses: actions/checkout@v3
         - name: list the checkout files

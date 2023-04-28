@@ -1,6 +1,6 @@
 name: actions test
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
     testing-the-actions:

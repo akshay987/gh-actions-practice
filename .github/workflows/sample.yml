@@ -1,6 +1,9 @@
 name: actions test
 
-on: [push, pull_request]
+on: 
+  push:
+  pull_request:
+    types: [closed, opened, assigned, reopened]
 
 jobs:
     testing-the-actions:

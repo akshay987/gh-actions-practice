@@ -1,7 +1,9 @@
 name: actions test
 
 on: 
-  push:
+  #push:
+  schedule:
+    - cron: "1 * * * *"
   pull_request:
     types: [closed, opened, assigned, reopened]
 

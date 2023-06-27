@@ -1,7 +1,7 @@
 name: gh-sample
 on: #[push]
-  schedule:
-    - cron: "* * * * *"
+  #schedule:
+  #  - cron: "* * * * *"
 jobs:
     run-shell-commands:
       runs-on: ubuntu-latest 

@@ -2,10 +2,10 @@ name: actions test
 
 on: 
   #push:
-  schedule:
-    - cron: "1 * * * *"
-  pull_request:
-    types: [closed, opened, assigned, reopened]
+  #schedule:
+  #  - cron: "1 * * * *"
+  #pull_request:
+  #  types: [closed, opened, assigned, reopened]
 
 jobs:
     testing-the-actions:

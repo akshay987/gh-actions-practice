@@ -1,5 +1,6 @@
 name: node-code-pipeline
-on: push 
+on: [push, workflow-dispatch]  
+# even we can add multiple events to trigger this workflow like above 
 jobs:
   test-node:
     runs-on: ubuntu-latest

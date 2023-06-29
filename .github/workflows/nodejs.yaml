@@ -17,6 +17,8 @@ jobs:
     # Adding another job under jobs , since test is one job we add deployment as another job
   Deploy:
     runs-on: ubuntu-latest
+    # if we want to run this job after the first job is ran succesfuly we have to add below key word 
+    needs: test-node
     steps:
       - name: code checkout
         uses: actions/checkout@v3

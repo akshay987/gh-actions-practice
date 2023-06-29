@@ -3,7 +3,7 @@ on: push
 jobs:
   test-node:
     runs-on: ubuntu-latest
-      steps:
+    steps:
         - name: code checkout
           uses: actions/checkout@v3
         - name: install NodeJS
@@ -14,3 +14,15 @@ jobs:
           run: npm ci
         - name: Run Tests
           run: npm test
+    # Adding another job under jobs , since test is one job we add deployment as another job
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v3
+      - name: install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies
+        run: npm ci

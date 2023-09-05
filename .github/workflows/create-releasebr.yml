@@ -13,8 +13,17 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }} # Use the token to checkout
+
+    - name: Set up Git user
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
 
     - name: Create and push release branch
       run: |
         git checkout -b release/${{ github.event.inputs.releaseVersion }}
         git push origin release/${{ github.event.inputs.releaseVersion }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This might not be necessary as git operations within the action should already have access to the token, but it's here just in case.
